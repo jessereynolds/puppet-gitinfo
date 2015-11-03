@@ -1,6 +1,6 @@
 module Puppet::Parser::Functions
   newfunction(:git_repo_details, :type => :rvalue) do |args|
-    return "Sausage! #{args.join(', ')} #{system('pwd')} #{system('env')}"
+    return "Sausage! #{args.join(', ')} #{`pwd`} #{`env`}"
   end
 end
 
